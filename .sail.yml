@@ -1,0 +1,9 @@
+tasks:
+  install:
+    image: ruby:2.5.1
+    args:
+      - bundle
+  test:
+    image: ruby:2.5.1
+    command: ["bash", "-c"]
+    args: ["bundle update && bundle exec rake spec"]
